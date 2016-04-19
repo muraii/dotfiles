@@ -15,6 +15,8 @@ set shiftwidth=4
 set smarttab
 set ruler
 set laststatus=2
+set guioptions-=r
+set guioptions-=L
 highlight Comment ctermfg=blue
 colorscheme jellyx
 
