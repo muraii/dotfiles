@@ -20,6 +20,8 @@ set guioptions-=L
 highlight Comment ctermfg=blue
 "colorscheme jellyx
 colorscheme smyck
+autocmd! BufEnter,BufNewFile *.py colo molokai
+autocmd! BufLeave *.py colo smyck
 
 syntax enable
 
