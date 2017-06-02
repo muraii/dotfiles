@@ -30,6 +30,8 @@ let g:pydiction_location = '~/.vim/plugin/pydiction-1.2/complete-dict'
 
 " Map the damn Esc to something nicer.
 :inoremap jj <Esc>
+:inoremap ii <C-T>
+:inoremap kk <C-D>
 
 nnoremap <F8> :NERDTree<CR>
 nnoremap <F9> :NERDTreeClose<CR>

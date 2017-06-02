@@ -1,0 +1,14 @@
+if [[ "$USER" == "danielblack" ]]
+then
+    # This is for your personal Macbook Pro.
+    export PATH="/Users/danielblack/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin"
+    export PATH="/Users/danielblack/miniconda3/bin:$PATH"
+    alias sshpi='ssh pi@192.168.50.1'
+elif [[ "$USER" == "blackds2" ]]
+then
+    # This is for your personal Macbook Pro.
+    export PATH="/usr/local/bin:/sur/bin:/bin:/usr/sbin:/Users/blackds2/Library/Python/2.7/bin"
+fi
+
+alias hgrep='history | grep $1'
+function g { links http://www.google.com/search?q="$1" ; }
