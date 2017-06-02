@@ -74,4 +74,3 @@ set statusline+=%y			" file type
 set statusline+=%=			" separator from left to right justified
 set statusline+=\ %{WordCount()}\ words,
 set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
-nnoremap <C-l> <C-w> l
