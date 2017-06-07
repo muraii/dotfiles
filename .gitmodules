@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vimwiki"]
 	path = .vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "bundle/calendar-vim"]
+	path = bundle/calendar-vim
+	url = git://github.com/mattn/calendar-vim
