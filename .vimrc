@@ -32,8 +32,11 @@ let g:pydiction_location = '~/.vim/plugin/pydiction-1.2/complete-dict'
 :inoremap ii <C-T>
 :inoremap kk <C-D>
 
+nmap <Leader>tt <Plug>VimwikiToggleListItem
+vmap <Leader>tt <Plug>VimwikiToggleListItem
 nnoremap <F8> :NERDTree<CR>
 nnoremap <F9> :NERDTreeClose<CR>
+nnoremap <Leader>c :Calendar<CR>
 "nnoremap <C-j> <C-w> j
 "nnoremap <C-k> <C-w> k
 "nnoremap <C-h> <C-w> h
