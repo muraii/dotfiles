@@ -6,8 +6,8 @@ alias df='df -h'
 alias hgrep='history | grep $1'
 alias ping='ping -c 2'
 
-function g { links http://www.google.com/search?q="$1" ; }
-function d { links http://www.duckduckgo.com/?q="$1" ; }
+function g { links http://www.google.com/search\?q\="$1" ; }
+function d { links http://www.duckduckgo.com/\?q\="$1" ; }
 
 if [ "`id -u`" = "0" ];
     then

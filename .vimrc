@@ -18,7 +18,17 @@ set laststatus=2
 set guioptions-=r
 set guioptions-=L
 highlight Comment ctermfg=blue
+"if has('gui_running')
+"    colorscheme hybrid
+"else
+"    colorscheme smyck
+"endif
+"colorscheme wwdc16
 colorscheme smyck
+set cursorline
+set cursorcolumn
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "autocmd! BufEnter,BufNewFile *.py colo molokai
 autocmd! BufEnter,BufNewFile *.py colo hybrid
 autocmd! BufLeave *.py colo smyck
