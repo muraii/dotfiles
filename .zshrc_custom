@@ -11,4 +11,13 @@ then
 fi
 
 alias hgrep='history | grep $1'
-function g { links http://www.google.com/search?q="$1" ; }
+function g { links http://www.google.com/search\?q="$1" ; }
+
+# Enables completion for um.
+#if [ -f $(brew --prefix)/etc/bash_completion.d/um-completion.sh ]; then
+#  . $(brew --prefix)/etc/bash_completion.d/um-completion.sh
+#fi
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+export PATH="/usr/local/opt/vim/bin/vim:/usr/local/sbin:$PATH"

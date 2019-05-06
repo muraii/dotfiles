@@ -6,8 +6,13 @@ filetype plugin on
 filetype plugin indent on
 " For CloseTag plugin, per mirnazim.org
 autocmd FileType html,htmldjango let b:closetag_html_style=1
+set relativenumber
 set number
+set splitright
+set splitbelow
 set autoindent
+set breakindent
+set breakindentopt=shift:2
 set softtabstop=4
 set expandtab
 set tabstop=4
@@ -87,3 +92,7 @@ set statusline+=%y			" file type
 set statusline+=%=			" separator from left to right justified
 set statusline+=\ %{WordCount()}\ words,
 set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
+
+" For notational-fzf-vim
+let g:nv_search_paths = ['~/notes', '~/writing', '~/code']
+set rtp+=/usr/local/opt/fzf
