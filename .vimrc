@@ -96,3 +96,11 @@ set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 " For notational-fzf-vim
 let g:nv_search_paths = ['~/notes', '~/writing', '~/code']
 set rtp+=/usr/local/opt/fzf
+
+" Creating the copy/paste mapping for Windows. Will adjust later if I need
+" to first check terminal type or OS.
+" source: https://stackoverflow.com/questions/44480829/how-to-copy-to-clipboard-in-vim-of-bash-on-windows/44534222#44534222
+" copy (write) highlighted text to .vimbuffer
+vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
+" paste from buffer
+map <C-v> :r ~/.vimbuffer<CR>
