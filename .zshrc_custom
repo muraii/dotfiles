@@ -11,6 +11,9 @@ then
 fi
 
 alias hgrep='history | grep $1'
+alias jupyter='export BROWSER=firefox && jupyter'
+alias clear='clear&&task'
+#alias ddgr='ddgr --url-handler links'
 function g { links http://www.google.com/search\?q="$1" ; }
 
 # Enables completion for um.
@@ -19,5 +22,31 @@ function g { links http://www.google.com/search\?q="$1" ; }
 #fi
 
 export VISUAL=vim
+# export BROWSER=links
+export BROWSER=w3m
 export EDITOR="$VISUAL"
 export PATH="/usr/local/opt/vim/bin/vim:/usr/local/sbin:$PATH"
+
+
+
+#THIS WAS ACTUALLY COPIED AND HACKED FROM .bashrc 190604 @ 0356
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/dblack/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/dblack/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/dblack/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/dblack/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+# Screw it. Shit ain't workin'.
+
+export PATH="/home/dblack/anaconda3/bin:$PATH"
+
+# Fix the issue with timezones on WSL going kaput or something gosh.
+export TZ='US/Eastern'
