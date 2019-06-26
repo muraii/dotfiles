@@ -49,7 +49,7 @@ unset __conda_setup
 if [[ "$USER" == "muraii" ]]
 then
     export PATH="/home/muraii/anaconda3/bin:$PATH"
-elif [[ "$USER" == "danielblack" ]]
+elif [[ "$USER" == "dblack" ]]
 then
     export PATH="/home/dblack/anaconda3/bin:$PATH"
 fi
