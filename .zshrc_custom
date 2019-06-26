@@ -46,7 +46,13 @@ unset __conda_setup
 # <<< conda initialize <<<
 # Screw it. Shit ain't workin'.
 
-export PATH="/home/dblack/anaconda3/bin:$PATH"
+if [[ "$USER" == "muraii" ]]
+then
+    export PATH="/home/muraii/anaconda3/bin:$PATH"
+elif [[ "$USER" == "danielblack" ]]
+then
+    export PATH="/home/dblack/anaconda3/bin:$PATH"
+fi
 
 # Fix the issue with timezones on WSL going kaput or something gosh.
 export TZ='US/Eastern'

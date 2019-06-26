@@ -1,12 +1,16 @@
-[submodule ".vim/vim-pathogen"]
+[submodule "vim-pathogen"]
 	path = .vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vimwiki"]
+[submodule "vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vimwiki"]
 	path = .vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
-[submodule "bundle/calendar-vim"]
-	path = .vim/bundle/calendar-vim
-	url = git://github.com/mattn/calendar-vim
+	branch = dev
+[submodule "taskwiki"]
+	path = .vim/bundle/taskwiki
+	url = https://github.com/tbabej/taskwiki
+[submodule "vim-conda"]
+	path = .vim/bundle/vim-conda
+	url = https://github.com/cjrh/vim-conda.git
