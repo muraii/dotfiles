@@ -94,8 +94,9 @@ set statusline+=\ %{WordCount()}\ words,
 set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
 " For notational-fzf-vim
-let g:nv_search_paths = ['~/notes', '~/writing', '~/code']
+let g:nv_search_paths = ['~/notes', '~/writing', '~/code', '~/.task', '~/vimwiki', '~/projects']
 set rtp+=/usr/local/opt/fzf
+set rtp+=~/winHome/gitrepos/fzf
 
 " Creating the copy/paste mapping for Windows. Will adjust later if I need
 " to first check terminal type or OS.

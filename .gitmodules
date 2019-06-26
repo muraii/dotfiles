@@ -14,3 +14,6 @@
 [submodule "vim-conda"]
 	path = .vim/bundle/vim-conda
 	url = https://github.com/cjrh/vim-conda.git
+[submodule "notational-fzf-vim"]
+	path = .vim/bundle/notational-fzf-vim
+	url = https://github.com/alok/notational-fzf-vim.git
