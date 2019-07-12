@@ -17,3 +17,9 @@
 [submodule "notational-fzf-vim"]
 	path = .vim/bundle/notational-fzf-vim
 	url = https://github.com/alok/notational-fzf-vim.git
+[submodule "monokai.vim"]
+	path = .vim/colors/vim-monokai
+	url = https://github.com/sickill/vim-monokai.git
+[submodule "tender.vim"]
+	path = .vim/colors/vim-tender
+	url = https://github.com/jacoborus/tender.vim.git
