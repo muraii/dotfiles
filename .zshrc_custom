@@ -11,8 +11,10 @@ then
 fi
 
 alias hgrep='history | grep $1'
-alias jupyter='export BROWSER=firefox && jupyter'
+alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
+alias jupyter-lab='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias clear='clear&&task'
+alias toast='powershell.exe -command New-BurntToastNotification'
 #alias ddgr='ddgr --url-handler links'
 function g { links http://www.google.com/search\?q="$1" ; }
 
@@ -22,8 +24,8 @@ function g { links http://www.google.com/search\?q="$1" ; }
 #fi
 
 export VISUAL=vim
-# export BROWSER=links
-export BROWSER=w3m
+export BROWSER=links
+# export BROWSER=w3m
 export EDITOR="$VISUAL"
 export PATH="/usr/local/opt/vim/bin/vim:/usr/local/sbin:$PATH"
 
@@ -56,3 +58,11 @@ fi
 
 # Fix the issue with timezones on WSL going kaput or something gosh.
 export TZ='US/Eastern'
+
+# Getting X running from WSL
+
+if [[ "$USER" == "dblack" ]]
+then
+    DISPLAY=0:0
+    export DISPLAY
+fi

@@ -34,8 +34,8 @@ set cursorline
 set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-"autocmd! BufEnter,BufNewFile *.py colo molokai
-autocmd! BufEnter,BufNewFile *.py colo hybrid
+autocmd! BufEnter,BufNewFile *.py colo monokai
+"autocmd! BufEnter,BufNewFile *.py colo hybrid
 autocmd! BufLeave *.py colo smyck
 
 syntax enable
@@ -104,4 +104,4 @@ set rtp+=~/winHome/gitrepos/fzf
 " copy (write) highlighted text to .vimbuffer
 vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 " paste from buffer
-map <C-v> :r ~/.vimbuffer<CR>
+map <C-q> :r ~/.vimbuffer<CR>
