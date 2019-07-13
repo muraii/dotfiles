@@ -15,6 +15,7 @@ alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias jupyter-lab='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias clear='clear&&task'
 alias toast='powershell.exe -command New-BurntToastNotification'
+alias se='fzf'
 #alias ddgr='ddgr --url-handler links'
 function g { links http://www.google.com/search\?q="$1" ; }
 
