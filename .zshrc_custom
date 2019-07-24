@@ -13,11 +13,14 @@ fi
 alias hgrep='history | grep $1'
 alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias jupyter-lab='export BROWSER=firefox && jupyter && export BROWSER=links'
-alias clear='clear&&task'
 alias toast='powershell.exe -command New-BurntToastNotification'
-alias se='fzf'
+alias flabble='if [[ -z "${CONDA_DEFAULT_ENV}" ]]; then task; else task "+${CONDA_DEFAULT_ENV}"; fi;'
+alias strat='task +strategic'
+alias cle='clear&&strat'
+alias cleer='clear&&flabble'
 #alias ddgr='ddgr --url-handler links'
 function g { links http://www.google.com/search\?q="$1" ; }
+function se { du -a ~/winHome/Downloads/* ~/vimwiki/* ~/winHome/gitrepos/* ~/projects/* | awk '{ print $2 }' | fzf | xargs -or $EDITOR; }
 
 # Enables completion for um.
 #if [ -f $(brew --prefix)/etc/bash_completion.d/um-completion.sh ]; then
