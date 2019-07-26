@@ -1,6 +1,9 @@
 set t_Co=256
+set encoding=utf-8
 execute pathogen#infect()
 execute pathogen#helptags()
+set rtp+=/usr/lib/python3/dist-packages/powerline/bindings/vim
+set laststatus=2
 filetype on
 filetype plugin on
 filetype plugin indent on
@@ -19,7 +22,7 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set ruler
-set laststatus=2
+"set laststatus=2 => It's set above.
 set guioptions-=r
 set guioptions-=L
 highlight Comment ctermfg=blue
@@ -29,15 +32,19 @@ highlight Comment ctermfg=blue
 "    colorscheme smyck
 "endif
 "colorscheme wwdc16
-colorscheme smyck
+colorscheme monokai
 set cursorline
 set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-autocmd! BufEnter,BufNewFile *.py colo monokai
+" autocmd! BufEnter,BufNewFile *.py colo monokai
 "autocmd! BufEnter,BufNewFile *.py colo hybrid
-autocmd! BufLeave *.py colo smyck
-
+" autocmd! BufLeave *.py colo smyck
+" This autocommand to *add* the highlight group from https://github.com/rodtreweek/Castle-Winbuntu/blob/master/README.md
+autocmd ColorScheme * highlight BadWhitespace ctermbg=DarkMagenta guibg=darkred
+" The autocommand below from
+" https://realpython.com/vim-and-python-a-match-made-in-heaven/.
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$\| \+\ze\t/
 syntax enable
 
 let g:pydiction_location = '~/.vim/plugin/pydiction-1.2/complete-dict'
@@ -84,14 +91,14 @@ augroup WordCounter
 	au! CursorHold,CursorHoldI * call UpdateWordCount()
 augroup END
 " Set statusline, shown here a piece at a time
-highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
-set statusline=%1*			" Switch to User1 color highlight
-set statusline+=%<%F			" file name, cut if needed at start
-set statusline+=%M			" modified flag
-set statusline+=%y			" file type
-set statusline+=%=			" separator from left to right justified
-set statusline+=\ %{WordCount()}\ words,
-set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
+" highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
+" set statusline=%1*			" Switch to User1 color highlight
+" set statusline+=%<%F			" file name, cut if needed at start
+" set statusline+=%M			" modified flag
+" set statusline+=%y			" file type
+" set statusline+=%=			" separator from left to right justified
+" set statusline+=\ %{WordCount()}\ words,
+" set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
 " For notational-fzf-vim
 let g:nv_search_paths = ['~/notes', '~/writing', '~/code', '~/.task', '~/vimwiki', '~/projects']

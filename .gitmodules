@@ -23,3 +23,9 @@
 [submodule "tender.vim"]
 	path = .vim/colors/vim-tender
 	url = https://github.com/jacoborus/tender.vim.git
+[submodule "SimplyFold"]
+	path = .vim/bundle/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
