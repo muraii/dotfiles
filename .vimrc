@@ -2,7 +2,7 @@ set t_Co=256
 set encoding=utf-8
 execute pathogen#infect()
 execute pathogen#helptags()
-set rtp+=/usr/lib/python3/dist-packages/powerline/bindings/vim
+set rtp+=/usr/lib/python3/dist-packages/powerline/bindings/vim/
 set laststatus=2
 filetype on
 filetype plugin on
@@ -23,8 +23,8 @@ set shiftwidth=4
 set smarttab
 set ruler
 "set laststatus=2 => It's set above.
-set guioptions-=r
-set guioptions-=L
+"set guioptions-=r
+"set guioptions-=L
 highlight Comment ctermfg=blue
 "if has('gui_running')
 "    colorscheme hybrid
@@ -90,15 +90,16 @@ set updatetime=1000
 augroup WordCounter
 	au! CursorHold,CursorHoldI * call UpdateWordCount()
 augroup END
+
 " Set statusline, shown here a piece at a time
-" highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
-" set statusline=%1*			" Switch to User1 color highlight
-" set statusline+=%<%F			" file name, cut if needed at start
-" set statusline+=%M			" modified flag
-" set statusline+=%y			" file type
-" set statusline+=%=			" separator from left to right justified
-" set statusline+=\ %{WordCount()}\ words,
-" set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
+highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
+set statusline=%1*			" Switch to User1 color highlight
+set statusline+=%<%F			" file name, cut if needed at start
+set statusline+=%M			" modified flag
+set statusline+=%y			" file type
+set statusline+=%=			" separator from left to right justified
+set statusline+=\ %{WordCount()}\ words,
+set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
 " For notational-fzf-vim
 let g:nv_search_paths = ['~/notes', '~/writing', '~/code', '~/.task', '~/vimwiki', '~/projects']
