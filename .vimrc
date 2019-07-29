@@ -92,14 +92,14 @@ augroup WordCounter
 augroup END
 
 " Set statusline, shown here a piece at a time
-highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
-set statusline=%1*			" Switch to User1 color highlight
-set statusline+=%<%F			" file name, cut if needed at start
-set statusline+=%M			" modified flag
-set statusline+=%y			" file type
-set statusline+=%=			" separator from left to right justified
-set statusline+=\ %{WordCount()}\ words,
-set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
+" highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
+" set statusline=%1*			" Switch to User1 color highlight
+" set statusline+=%<%F			" file name, cut if needed at start
+" set statusline+=%M			" modified flag
+" set statusline+=%y			" file type
+" set statusline+=%=			" separator from left to right justified
+" set statusline+=\ %{WordCount()}\ words,
+" set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
 " For notational-fzf-vim
 let g:nv_search_paths = ['~/notes', '~/writing', '~/code', '~/.task', '~/vimwiki', '~/projects']
