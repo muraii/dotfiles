@@ -10,6 +10,9 @@ then
     export PATH="/usr/local/bin:/sur/bin:/bin:/usr/sbin:/Users/blackds2/Library/Python/2.7/bin"
 fi
 
+# Add in the powerline prompt for zsh : 190729 1653
+. /usr/share/powerline/bindings/zsh/powerline.zsh
+
 alias hgrep='history | grep $1'
 alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias jupyter-lab='export BROWSER=firefox && jupyter && export BROWSER=links'
