@@ -11,7 +11,7 @@ then
 fi
 
 # Add in the powerline prompt for zsh : 190729 1653
-. /usr/share/powerline/bindings/zsh/powerline.zsh
+# . /usr/share/powerline/bindings/zsh/powerline.zsh
 
 alias hgrep='history | grep $1'
 alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
@@ -21,6 +21,8 @@ alias flabble='if [[ -z "${CONDA_DEFAULT_ENV}" ]]; then task; else task "+${COND
 alias strat='task +strategic'
 alias cle='clear&&strat'
 alias cleer='clear&&flabble'
+# alias toot="tmux new -d -s tootstream && tmux new-window -t tootstream:1 -n 'toot' 'conda activate tootstream && tootstream' && tmux a"
+alias toot='bin/toot.sh'
 #alias ddgr='ddgr --url-handler links'
 function g { links http://www.google.com/search\?q="$1" ; }
 function se { du -a ~/winHome/Downloads/* ~/vimwiki/* ~/winHome/gitrepos/* ~/projects/* | awk '{ print $2 }' | fzf | xargs -or $EDITOR; }
@@ -73,3 +75,7 @@ then
     DISPLAY=0:0
     export DISPLAY
 fi
+
+# Apache Spark setup
+export SPARK_HOME=/opt/apache-spark/spark-2.4.4-bin-hadoop2.7
+export PATH=$PATH:$SPARK_HOME/bin

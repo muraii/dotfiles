@@ -32,3 +32,6 @@
 [submodule "vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim-dadbod"]
+	path = .vim/bundle/vim-dadbod
+	url = https://github.com/tpope/vim-dadbod.git
