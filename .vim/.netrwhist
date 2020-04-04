@@ -1,8 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/mnt/c/Users/Dan042919/gitrepos/GettingStarted.DocumentTransformations/ADP/RunPayrollDetails/testing_docs'
-let g:netrw_dirhist_2='/mnt/c/Users/Dan042919/gitrepos/GettingStarted.DocumentTransformations/ADP/RunPayrollDetails/testing_docs/me'
-let g:netrw_dirhist_3='/mnt/c/Users/Dan042919/gitrepos/GettingStarted.DocumentTransformations/ADP/RunPayrollDetails/testing_docs/me/WFN Payroll'
-let g:netrw_dirhist_4='/home/dblack/.config/tootstream'
-let g:netrw_dirhist_5='/mnt/c/Users/Dan042919/gitrepos/GettingStarted.HeaderTransformations/ImportHubTool-Phase1SupUtility'
-let g:netrw_dirhist_6='/mnt/c/Users/Dan042919/gitrepos/GettingStarted.HeaderTransformations/.git'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/mnt/c/Users/Dan042919/gitrepos/DataTeam.Development/SourceXLS_to_ImportTemplateTool_TRoberts_SupportUtilityWebApp'
+let g:netrw_dirhist_2='/home/dblack/.pyenv/versions'
+let g:netrw_dirhist_3='/c/newgit/GettingStarted.DocumentTransformations/ADP'
+let g:netrw_dirhist_4='/c/newgit'
+let g:netrw_dirhist_5='/c/Users/Dan042919/projects/sharePoint_QA_files_200326/sharepoint_qa_files_200326'

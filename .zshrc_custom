@@ -1,81 +1,67 @@
-if [[ "$USER" == "danielblack" ]]
-then
-    # This is for your personal Macbook Pro.
-    export PATH="/Users/danielblack/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin"
-    export PATH="/Users/danielblack/miniconda3/bin:$PATH"
-    alias sshpi='ssh pi@192.168.50.1'
-elif [[ "$USER" == "blackds2" ]]
-then
-    # This is for your personal Macbook Pro.
-    export PATH="/usr/local/bin:/sur/bin:/bin:/usr/sbin:/Users/blackds2/Library/Python/2.7/bin"
-fi
-
-# Add in the powerline prompt for zsh : 190729 1653
-# . /usr/share/powerline/bindings/zsh/powerline.zsh
-
+# [------------ Aliases ------------]
 alias hgrep='history | grep $1'
+alias agrep='alias | grep $1'
+alias lash='ls -lashtr --color=auto'
 alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
-alias jupyter-lab='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias toast='powershell.exe -command New-BurntToastNotification'
 alias flabble='if [[ -z "${CONDA_DEFAULT_ENV}" ]]; then task; else task "+${CONDA_DEFAULT_ENV}"; fi;'
-alias strat='task +strategic'
-alias cle='clear&&strat'
-alias cleer='clear&&flabble'
-# alias toot="tmux new -d -s tootstream && tmux new-window -t tootstream:1 -n 'toot' 'conda activate tootstream && tootstream' && tmux a"
-alias toot='bin/toot.sh'
-#alias ddgr='ddgr --url-handler links'
+alias clear='clear -x'
+alias cleer='clear -x&&flabble'
+alias vw='vim -c "VimwikiIndex"'
+alias acs='apt-cache search'
+alias sapt='sudo apt-get install'
+alias imps='grep -RE "(from)? ?import.*" *.py'
 function g { links http://www.google.com/search\?q="$1" ; }
-function se { du -a ~/winHome/Downloads/* ~/vimwiki/* ~/winHome/gitrepos/* ~/projects/* | awk '{ print $2 }' | fzf | xargs -or $EDITOR; }
 
-# Enables completion for um.
-#if [ -f $(brew --prefix)/etc/bash_completion.d/um-completion.sh ]; then
-#  . $(brew --prefix)/etc/bash_completion.d/um-completion.sh
-#fi
+# [------------ Default Tools ------------]
 
 export VISUAL=vim
 export BROWSER=links
-# export BROWSER=w3m
 export EDITOR="$VISUAL"
-export PATH="/usr/local/opt/vim/bin/vim:/usr/local/sbin:$PATH"
-
-
-
-#THIS WAS ACTUALLY COPIED AND HACKED FROM .bashrc 190604 @ 0356
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/dblack/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/dblack/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/dblack/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/dblack/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-# Screw it. Shit ain't workin'.
-
-if [[ "$USER" == "muraii" ]]
-then
-    export PATH="/home/muraii/anaconda3/bin:$PATH"
-elif [[ "$USER" == "dblack" ]]
-then
-    export PATH="/home/dblack/anaconda3/bin:$PATH"
+export NNN_COPIER=$HOME/bin/nnn_copier.sh # Set up xsel for the NNN_COPIER environment variable for `nnn`.
+export DOCKER_HOST=tcp://localhost:2375
+export PYTHON_CONFIGURE_OPTS="--enable-shared"
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
 fi
 
-# Fix the issue with timezones on WSL going kaput or something gosh.
-export TZ='US/Eastern'
+# [------------ PATH ------------]
 
-# Getting X running from WSL
-
-if [[ "$USER" == "dblack" ]]
-then
-    DISPLAY=0:0
-    export DISPLAY
-fi
-
+export PATH="/usr/local/opt/vim/bin/vim:/usr/local/sbin:/home/dblack/bin:$PATH"
 # Apache Spark setup
 export SPARK_HOME=/opt/apache-spark/spark-2.4.4-bin-hadoop2.7
 export PATH=$PATH:$SPARK_HOME/bin
+export GOPATH=$HOME/go
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+# export JAVA_HOME="/usr/bin/java"
+export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+export PATH="$JAVA_HOME:$PATH"
+# Fix for WSL PATH from https://www.reddit.com/r/bashonubuntuonwindows/comments/c09tbb/how_does_wsl_derive_its_path/
+export PATH="$(tr ':' '\n' <<<"$PATH" | grep -Ev '^(/mnt)/c/' | paste -sd ':')"
+
+# [------------ Machine-specific  ------------]
+
+if [[ "$USER" == "muraii" ]] #                          Gaming PC
+then
+    export PATH="/home/muraii/anaconda3/bin:$PATH"
+elif [[ "$USER" == "dblack" ]] #                        Work laptop
+then
+    # Getting X running from WSL
+    DISPLAY=0:0
+    export DISPLAY
+
+    # Setting up cut'n'paste.
+    alias cmd='/mnt/c/Windows/System32/cmd.exe'
+    alias clip='/mnt/c/Windows/System32/clip.exe'
+
+    # Miscellaneous functions in WSL.
+    function se { du -a ~/winHome/Downloads/* ~/vimwiki/* ~/winHome/gitrepos/* ~/projects/* | awk '{ print $2 }' | fzf | xargs -or $EDITOR; }
+    # Fix the issue with timezones on WSL going kaput or something gosh.
+    export TZ='US/Eastern'
+elif [[ "$USER" == "danielblack" ]] #                   Macbook Pro.
+then
+    export PATH="/Users/danielblack/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin"
+fi

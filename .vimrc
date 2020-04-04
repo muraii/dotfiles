@@ -1,3 +1,5 @@
+" Set shell so the split window navigation works.
+set shell=/bin/bash
 set t_Co=256
 set encoding=utf-8
 execute pathogen#infect()
@@ -22,24 +24,13 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set ruler
-"set laststatus=2 => It's set above.
-"set guioptions-=r
-"set guioptions-=L
+command VW :vsp +VimwikiIndex
 highlight Comment ctermfg=blue
-"if has('gui_running')
-"    colorscheme hybrid
-"else
-"    colorscheme smyck
-"endif
-"colorscheme wwdc16
 colorscheme monokai
 set cursorline
 set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-" autocmd! BufEnter,BufNewFile *.py colo monokai
-"autocmd! BufEnter,BufNewFile *.py colo hybrid
-" autocmd! BufLeave *.py colo smyck
 " This autocommand to *add* the highlight group from https://github.com/rodtreweek/Castle-Winbuntu/blob/master/README.md
 autocmd ColorScheme * highlight BadWhitespace ctermbg=DarkBlue guibg=darkred
 " The autocommand below from
@@ -53,20 +44,19 @@ let g:pydiction_location = '~/.vim/plugin/pydiction-1.2/complete-dict'
 :inoremap jj <Esc>
 :inoremap ii <C-T>
 :inoremap kk <C-D>
-
 nmap <Leader>tt <Plug>VimwikiToggleListItem
 vmap <Leader>tt <Plug>VimwikiToggleListItem
 nnoremap <F8> :NERDTree<CR>
 nnoremap <F9> :NERDTreeClose<CR>
 nnoremap <Leader>c :Calendar<CR>
-"nnoremap <C-j> <C-w> j
-"nnoremap <C-k> <C-w> k
-"nnoremap <C-h> <C-w> h
-"nnoremap <C-l> <C-w> l
-" vimwiki/vimwiki
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Here begins my automated wordcount addition.
 " This combines several ideas from:
 " http://stackoverflow.com/questions/114431/fast-word-count-function-in-vim
@@ -90,16 +80,6 @@ set updatetime=1000
 augroup WordCounter
 	au! CursorHold,CursorHoldI * call UpdateWordCount()
 augroup END
-
-" Set statusline, shown here a piece at a time
-" highlight User1 ctermbg=green guibg=green ctermfg=black guifg=black
-" set statusline=%1*			" Switch to User1 color highlight
-" set statusline+=%<%F			" file name, cut if needed at start
-" set statusline+=%M			" modified flag
-" set statusline+=%y			" file type
-" set statusline+=%=			" separator from left to right justified
-" set statusline+=\ %{WordCount()}\ words,
-" set statusline+=\ %l/%L\ lines,\ %P	" percentage through the file
 
 " For notational-fzf-vim
 let g:nv_search_paths = ['~/notes', '~/writing', '~/code', '~/.task', '~/vimwiki', '~/projects']
