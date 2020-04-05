@@ -1,5 +1,6 @@
 " Set shell so the split window navigation works.
-set shell=/bin/bash
+" set shell=/bin/bash
+set shell=/usr/local/bin/zsh
 set t_Co=256
 set encoding=utf-8
 execute pathogen#infect()
