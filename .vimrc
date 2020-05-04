@@ -1,10 +1,36 @@
 " Set shell so the split window navigation works.
 " set shell=/bin/bash
-set shell=/usr/local/bin/zsh
+if has('win32')
+    let g:os = 'Windows'
+else
+    let g:os = substitute(system('uname'), '\n', '', '')
+endif
+if g:os == 'Darwin'
+    set shell=/usr/local/bin/zsh
+elseif g:os == 'Linux'
+    set shell=/usr/bin/zsh
+endif
 set t_Co=256
 set encoding=utf-8
-execute pathogen#infect()
-execute pathogen#helptags()
+"execute pathogen#infect()
+"execute pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tmhedberg/SimpylFold'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'mcchrish/nnn.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
+Plug 'tbabej/taskwiki'
+Plug 'https://github.com/alok/notational-fzf-vim'
+
+call plug#end()
+
 set rtp+=/usr/lib/python3/dist-packages/powerline/bindings/vim/
 set laststatus=2
 filetype on
@@ -45,8 +71,8 @@ let g:pydiction_location = '~/.vim/plugin/pydiction-1.2/complete-dict'
 :inoremap jj <Esc>
 :inoremap ii <C-T>
 :inoremap kk <C-D>
-nmap <Leader>tt <Plug>VimwikiToggleListItem
-vmap <Leader>tt <Plug>VimwikiToggleListItem
+"nmap <Leader>tt <Plug>VimwikiToggleListItem
+"vmap <Leader>tt <Plug>VimwikiToggleListItem
 nnoremap <F8> :NERDTree<CR>
 nnoremap <F9> :NERDTreeClose<CR>
 nnoremap <Leader>c :Calendar<CR>

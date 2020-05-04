@@ -5,7 +5,7 @@ alias lash='ls -lashtr --color=auto'
 alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias toast='powershell.exe -command New-BurntToastNotification'
 alias clear='clear -x'
-alias cleer='clear -x&&flabble'
+alias cleer='clear -x&&task ready'
 alias vw='vim -c "VimwikiIndex"'
 alias acs='apt-cache search'
 alias sapt='sudo apt-get install'
@@ -51,6 +51,7 @@ fi
 
 # [------------ PATH ------------]
 
+export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/opt/vim/bin/vim:/usr/local/sbin:$PATH"
 # Apache Spark setup
 export SPARK_HOME=/opt/apache-spark/spark-2.4.4-bin-hadoop2.7
