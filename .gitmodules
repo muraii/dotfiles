@@ -1,6 +1,3 @@
-[submodule "vim-pathogen"]
-	path = .vim/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
 [submodule "vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -35,36 +32,9 @@
 [submodule "nnn-vim"]
 	path = .vim/bundle/nnn.vim
 	url = https://github.com/mcchrish/nnn.vim.git
-[submodule ".vim/vim-pathogen"]
-	path = .vim/autoload/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vimwiki"]
-	path = .vim/bundle/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
-[submodule ".vim/bundle/taskwiki"]
-	path = .vim/bundle/taskwiki
-	url = https://github.com/tbabej/taskwiki
-[submodule ".vim/bundle/notational-fzf-vim"]
-	path = .vim/bundle/notational-fzf-vim
-	url = https://github.com/alok/notational-fzf-vim.git
-[submodule ".vim/bundle/SimplylFold"]
-	path = .vim/bundle/SimplylFold
-	url = https://github.com/tmhedberg/SimpylFold.git
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/bundle/vim-dadbod"]
-	path = .vim/bundle/vim-dadbod
-	url = https://github.com/tpope/vim-dadbod.git
-[submodule ".vim/bundle/nnn.vim"]
-	path = .vim/bundle/nnn.vim
-	url = https://github.com/mcchrish/nnn.vim.git
 [submodule ".vim/colors/vim-monokai"]
 	path = .vim/colors/vim-monokai
 	url = https://github.com/sickill/vim-monokai.git
+[submodule ".vim/autoload/.vim/autoload/vim-plug"]
+	path = .vim/autoload/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
