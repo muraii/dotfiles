@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/home/dblack/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -10,7 +8,10 @@ export ZSH="/home/dblack/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 if [[ "$USER" == "danielblack" ]] then #                   Macbook Pro.
     ZSH_THEME="spaceship"
+    export ZSH="/Users/danielblack/.oh-my-zsh"
 else
+    # Path to your oh-my-zsh installation.
+    export ZSH="/home/dblack/.oh-my-zsh"
     ZSH_THEME="honukai"
 fi
 # ZSH_THEME="powerlevel9k/powerlevel9k"
