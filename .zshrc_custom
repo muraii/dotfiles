@@ -38,6 +38,9 @@ then
     alias cmd='/mnt/c/Windows/System32/cmd.exe'
     alias clip='/mnt/c/Windows/System32/clip.exe'
 
+    # Change some keybindings for making the keys more usefuler.
+    bindkey "^F" forward-char
+
     # Miscellaneous functions in WSL.
     function se { du -a ~/winHome/Downloads/* ~/vimwiki/* ~/winHome/gitrepos/* ~/projects/* | awk '{ print $2 }' | fzf | xargs -or $EDITOR; }
     # Fix the issue with timezones on WSL going kaput or something gosh.
@@ -73,3 +76,4 @@ fi
 
 # [------------ GIT -------------]
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+export PATH="$PATH:/opt/mssql-tools/bin"

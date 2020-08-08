@@ -1,3 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =2
 let g:netrw_dirhist_1='/c/Users/Dan042919/gitrepos/GettingStarted.DocumentTransformations/Parallel/ADP_PayrollRegister_DB'
+let g:netrw_dirhist_2='/c/Users/Dan042919/projects/flask_play_200721/flask_play/flask_play'
