@@ -1,16 +1,3 @@
-[submodule "vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vimwiki"]
-	path = .vim/bundle/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
-	branch = dev
-[submodule "taskwiki"]
-	path = .vim/bundle/taskwiki
-	url = https://github.com/tbabej/taskwiki
-[submodule "notational-fzf-vim"]
-	path = .vim/bundle/notational-fzf-vim
-	url = https://github.com/alok/notational-fzf-vim.git
 [submodule "monokai.vim"]
 	path = .vim/colors/vim-monokai
 	url = https://github.com/sickill/vim-monokai.git
