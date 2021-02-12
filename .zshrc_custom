@@ -2,9 +2,9 @@
 alias hgrep='history | grep $1'
 alias agrep='alias | grep $1'
 alias lash='ls -lashtr --color=auto'
-alias jupyter='export BROWSER=firefox && jupyter && export BROWSER=links'
-alias jupyter-lab='export BROWSER=firefox && jupyter-lab && export BROWSER=links'
-alias jupyter-lab-port='export BROWSER=firefox && jupyter-lab --port=$1 && export BROWSER=links'
+alias jupyter-ff='export BROWSER=firefox && jupyter && export BROWSER=links'
+alias jupyter-lab-ff='export BROWSER=firefox && jupyter-lab && export BROWSER=links'
+alias jupyter-lab-port-ff='export BROWSER=firefox && jupyter-lab --port=$1 && export BROWSER=links'
 alias toast='powershell.exe -command New-BurntToastNotification'
 alias clear='clear -x'
 alias cleer='clear -x&&task ready'
@@ -12,6 +12,8 @@ alias vw='vim -c "VimwikiIndex"'
 alias acs='apt-cache search'
 alias sapt='sudo apt-get install'
 alias imps='grep -RE "(from)? ?import.*" *.py'
+alias ddgr='ddgr -n 4'
+alias cpwd='pwd | clip.exe'
 function g { links http://www.google.com/search\?q="$1" ; }
 
 # [------------ Default Tools ------------]

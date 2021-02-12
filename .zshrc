@@ -128,3 +128,4 @@ source ~/.zshrc_custom
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f "/home/dblack/.ghcup/env" ] && source "/home/dblack/.ghcup/env" # ghcup-env
