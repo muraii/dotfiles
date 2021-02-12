@@ -14,13 +14,25 @@ fi
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 if [[ "$USER" == "danielblack" ]] then #                   Macbook Pro.
-    ZSH_THEME="spaceship"
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+    # ZSH_THEME="spaceship"
     export ZSH="/Users/danielblack/.oh-my-zsh"
+    # Set up plugins
+    export FZF_BASE="/usr/local/bin/fzf"
 elif [[ "$USER" == "dblack" ]] then #                        Work laptop
     # Path to your oh-my-zsh installation.
     export ZSH="/home/dblack/.oh-my-zsh"
     # ZSH_THEME="honukai"
     ZSH_THEME="powerlevel10k/powerlevel10k"
+    # Set up plugins
+    export FZF_BASE="/home/dblack/winHome/gitrepos/fzf"
+elif [[ "$USER" == "muraii" ]] then #                        Work laptop
+    # Path to your oh-my-zsh installation.
+    export ZSH="/home/muraii/.oh-my-zsh"
+    # ZSH_THEME="honukai"
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+    # Set up plugins
+    export FZF_BASE="/home/muraii/winHome/gitrepos/fzf"
 fi
 
 # ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -93,8 +105,6 @@ plugins=(
     git
     themes
     )
-# Set up plugins
-export FZF_BASE="/home/dblack/winHome/gitrepos/fzf"
 
 source $ZSH/oh-my-zsh.sh
 

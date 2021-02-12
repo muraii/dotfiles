@@ -20,11 +20,14 @@ Send, %TimeString%
 Return
 
 #T::
-run C:\Windows\System32\wscript.exe "C:\Users\Dan042919\Utilities\terminator.vbs"
+;run C:\Windows\System32\wscript.exe "C:\Users\Daniel\Utilities\terminator.vbs"
+run C:\Users\Daniel\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminal_8wekyb3d8bbwe\wt.exe --maximized
+Sleep 1500
+WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 Return
 
 #F::
-run C:\Users\Dan042919\AppData\Local\fman\fman.exe
+run C:\Users\Daniel\AppData\Local\fman\fman.exe
 Sleep 4500
 WinActivate fman
 Return
