@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/c/Users/Dan042919/gitrepos/GettingStarted.DocumentTransformations/Parallel/ADP_PayrollRegister_DB'
 let g:netrw_dirhist_2='/c/Users/Dan042919/projects/flask_play_200721/flask_play/flask_play'
 let g:netrw_dirhist_3='/home/dblack/.docker'
 let g:netrw_dirhist_4='/c/Users/Dan042919/projects/vagrant_play_200813_docker'
 let g:netrw_dirhist_5='/c/Users/Dan042919/projects/Org_builder_PyInstaller_thingy_200508/Org Import Builder/rive - Paycor, Inc/Desktop/Org Import Builder/.vscode'
 let g:netrw_dirhist_6='/c/Users/Dan042919/gitrepos/GettingStarted.DocumentTransformations/Parallel/Paychex_FlexPayrollJournalPDF_TR'
+let g:netrw_dirhist_7='/c/Users/Dan042919/projects/BE Transformations'
+let g:netrw_dirhist_8='/home/dblack/.task'

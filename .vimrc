@@ -20,7 +20,7 @@ Plug 'rbong/vim-flog'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tmhedberg/SimpylFold'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', {'branch': 'legacy-vim'}
 Plug 'mcchrish/nnn.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-dadbod'
@@ -28,13 +28,23 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'tbabej/taskwiki'
 Plug 'https://github.com/alok/notational-fzf-vim'
-
+Plug 'edkolev/tmuxline.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-system-copy'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " ########### Doing airline stuff.
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+
+" Use airline for tabs, too.
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
 
 " unicode symbols
 let g:airline_left_sep = '»'
@@ -69,6 +79,8 @@ let g:airline_symbols.dirty='⚡'
 
 " ########### /Doing airline stuff.
 
+" ########### Doing tmuxline stuff.
+let g:airline#extensions#tmuxline#enabled = 0
 
 set rtp+=/usr/lib/python3/dist-packages/powerline/bindings/vim/
 set laststatus=2
@@ -91,6 +103,7 @@ set shiftwidth=4
 set smarttab
 set ruler
 command VW :vsp +VimwikiIndex
+command -range CP :'<, '> w !clip.exe
 highlight Comment ctermfg=blue
 colorscheme monokai
 set cursorline

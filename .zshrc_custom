@@ -6,7 +6,7 @@ alias jupyter-ff='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias jupyter-lab-ff='export BROWSER=firefox && jupyter-lab && export BROWSER=links'
 alias jupyter-lab-port-ff='export BROWSER=firefox && jupyter-lab --port=$1 && export BROWSER=links'
 alias toast='powershell.exe -command New-BurntToastNotification'
-alias clear='clear -x'
+alias cl='clear -x'
 alias cleer='clear -x&&task ready'
 alias vw='vim -c "VimwikiIndex"'
 alias acs='apt-cache search'
@@ -14,6 +14,7 @@ alias sapt='sudo apt-get install'
 alias imps='grep -RE "(from)? ?import.*" *.py'
 alias ddgr='ddgr -n 4'
 alias cpwd='pwd | clip.exe'
+alias gpset='git rev-parse --abbrev-ref HEAD | xargs git push --set-upstream origin'
 function g { links http://www.google.com/search\?q="$1" ; }
 
 # [------------ Default Tools ------------]
@@ -24,6 +25,7 @@ export EDITOR="$VISUAL"
 export NNN_COPIER=$HOME/bin/nnn_copier.sh # Set up xsel for the NNN_COPIER environment variable for `nnn`.
 export DOCKER_HOST=tcp://localhost:2375
 export PYTHON_CONFIGURE_OPTS="--enable-shared"
+export DISABLE_AUTO_TITLE=true # For tmuxp.
 
 # [------------ Machine-specific  ------------]
 
