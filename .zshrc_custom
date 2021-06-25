@@ -4,9 +4,10 @@ alias agrep='alias | grep $1'
 alias lash='ls -lashtr --color=auto'
 alias jupyter-ff='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias jupyter-lab-ff='export BROWSER=firefox && jupyter-lab && export BROWSER=links'
-alias jupyter-lab-port-ff='export BROWSER=firefox && jupyter-lab --port=$1 && export BROWSER=links'
+# alias jupyter-lab-port-ff='export BROWSER=firefox && jupyter-lab --port=$1 && export BROWSER=links'
+alias jupyter-lab-alt-ff='export BROWSER=firefox && jupyter-lab --port=8890 && export BROWSER=links'
 alias toast='powershell.exe -command New-BurntToastNotification'
-alias cl='clear -x'
+alias cl='clear -x && cowlias'
 alias cleer='clear -x&&task ready'
 alias vw='vim -c "VimwikiIndex"'
 alias acs='apt-cache search'
@@ -15,6 +16,12 @@ alias imps='grep -RE "(from)? ?import.*" *.py'
 alias ddgr='ddgr -n 4'
 alias cpwd='pwd | clip.exe'
 alias gpset='git rev-parse --abbrev-ref HEAD | xargs git push --set-upstream origin'
+# [-----------Random QOL-----------]
+# Have the cow say a random alias from the .zshrc_custom file.
+# awk '/^alias / { print $0 }' ~/.zshrc_custom | shuf | head -n 1 | cowsay
+# Have the cow say a random alias from the alias command.
+alias cowlias='alias | shuf | head -n 1 | cowsay'
+
 function g { links http://www.google.com/search\?q="$1" ; }
 
 # [------------ Default Tools ------------]
@@ -81,3 +88,4 @@ fi
 # [------------ GIT -------------]
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 export PATH="$PATH:/opt/mssql-tools/bin"
+
