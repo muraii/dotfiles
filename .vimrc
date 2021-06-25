@@ -31,6 +31,7 @@ Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-system-copy'
+Plug 'dhruvasagar/vim-zoom'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
