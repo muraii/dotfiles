@@ -88,3 +88,4 @@ fi
 # [------------ GIT -------------]
 source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 export PATH="$PATH:/opt/mssql-tools/bin"
+
