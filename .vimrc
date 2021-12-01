@@ -91,6 +91,8 @@ filetype plugin on
 filetype plugin indent on
 " For CloseTag plugin, per mirnazim.org
 autocmd FileType html,htmldjango let b:closetag_html_style=1
+" Make LINQ files get syntax highlighting like C#.
+autocmd BufNewFile,BufRead *.linq set syntax=cs
 set relativenumber
 set number
 set splitright
