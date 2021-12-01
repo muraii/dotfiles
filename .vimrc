@@ -20,7 +20,8 @@ Plug 'rbong/vim-flog'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tmhedberg/SimpylFold'
-Plug 'ycm-core/YouCompleteMe', {'branch': 'legacy-vim'}
+" Plug 'ycm-core/YouCompleteMe', {'branch': 'legacy-vim'}
+Plug 'ycm-core/YouCompleteMe'
 Plug 'mcchrish/nnn.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-dadbod'
@@ -135,6 +136,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:taskwiki_disable_concealcursor='yes'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Here begins my automated wordcount addition.
@@ -173,3 +175,4 @@ set rtp+=~/winHome/gitrepos/fzf
 vmap <C-c> y:new ~/.vimbuffer<CR>VGp:x<CR> \| :!cat ~/.vimbuffer \| clip.exe <CR><CR>
 " paste from buffer
 map <C-q> :r ~/.vimbuffer<CR>
+hi CursorLineNr cterm=bold

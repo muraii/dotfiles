@@ -16,6 +16,11 @@ alias imps='grep -RE "(from)? ?import.*" *.py'
 alias ddgr='ddgr -n 4'
 alias cpwd='pwd | clip.exe'
 alias gpset='git rev-parse --abbrev-ref HEAD | xargs git push --set-upstream origin'
+# alias updatehosts='sudo vim -O ~/.hosts /etc/hosts'
+alias updatehosts='cat ~/.hosts | sudo tee -a /etc/hosts'
+alias tma='tmux a'
+alias tmn='tmux new-session'
+
 # [-----------Random QOL-----------]
 # Have the cow say a random alias from the .zshrc_custom file.
 # awk '/^alias / { print $0 }' ~/.zshrc_custom | shuf | head -n 1 | cowsay
@@ -42,8 +47,9 @@ then
 elif [[ "$USER" == "dblack" ]] #                        Work laptop
 then
     # Getting X running from WSL
-    DISPLAY=0:0
-    export DISPLAY
+    # DISPLAY=0:0
+    # export DISPLAY
+    export DISPLAY=$(awk '/nameserver / { print $2; exit }' /etc/resolv.conf 2>/dev/null):0
 
     # Setting up cut'n'paste.
     alias cmd='/mnt/c/Windows/System32/cmd.exe'
@@ -80,9 +86,11 @@ export PATH="$HOME/.local/bin:$PATH"
 # export JAVA_HOME="/usr/bin/java"
 export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
 export PATH="$JAVA_HOME:$PATH"
+export PATH="$HOME/neovim/bin:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
+    # eval "$(pyenv init -)"
+    eval "$(pyenv init --path)"
 fi
 
 # [------------ GIT -------------]

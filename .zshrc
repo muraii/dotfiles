@@ -1,3 +1,6 @@
+# Quiet the pyenv/OMZ configuration error.
+# https://github.com/pyenv/pyenv/issues/2041
+export ZSH_PYENV_QUIET=true
 # [------------ SSH -------------]
 env=~/.ssh/agent.env
 
