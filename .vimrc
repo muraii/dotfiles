@@ -115,7 +115,8 @@ set cursorcolumn
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 " This autocommand to *add* the highlight group from https://github.com/rodtreweek/Castle-Winbuntu/blob/master/README.md
-autocmd ColorScheme * highlight BadWhitespace ctermbg=DarkBlue guibg=darkred
+"autocmd ColorScheme * highlight BadWhitespace ctermbg=DarkBlue guibg=darkred
+autocmd ColorScheme * highlight BadWhitespace ctermbg=163 guibg=darkred
 " The autocommand below from
 " https://realpython.com/vim-and-python-a-match-made-in-heaven/.
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$\| \+\ze\t/

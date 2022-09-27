@@ -4,6 +4,7 @@ alias agrep='alias | grep $1'
 alias lash='ls -lashtr --color=auto'
 alias jupyter-ff='export BROWSER=firefox && jupyter && export BROWSER=links'
 alias jupyter-lab-ff='export BROWSER=firefox && jupyter-lab && export BROWSER=links'
+alias jupyter-lab-ff-wsl='export BROWSER=firefox && jupyter-lab --ip 127.0.1.1 && export BROWSER=links'
 # alias jupyter-lab-port-ff='export BROWSER=firefox && jupyter-lab --port=$1 && export BROWSER=links'
 alias jupyter-lab-alt-ff='export BROWSER=firefox && jupyter-lab --port=8890 && export BROWSER=links'
 alias toast='powershell.exe -command New-BurntToastNotification'
@@ -38,6 +39,7 @@ export NNN_COPIER=$HOME/bin/nnn_copier.sh # Set up xsel for the NNN_COPIER envir
 export DOCKER_HOST=tcp://localhost:2375
 export PYTHON_CONFIGURE_OPTS="--enable-shared"
 export DISABLE_AUTO_TITLE=true # For tmuxp.
+export TZ="US/Mountain"
 
 # [------------ Machine-specific  ------------]
 
