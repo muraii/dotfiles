@@ -40,6 +40,7 @@ export DOCKER_HOST=tcp://localhost:2375
 export PYTHON_CONFIGURE_OPTS="--enable-shared"
 export DISABLE_AUTO_TITLE=true # For tmuxp.
 export TZ="US/Mountain"
+export GCM_CREDENTIAL_STORE=secretservice
 
 # [------------ Machine-specific  ------------]
 
